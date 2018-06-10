@@ -1,0 +1,6 @@
+framework module RKKeyboardManager {
+  umbrella header "RKKeyboardManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

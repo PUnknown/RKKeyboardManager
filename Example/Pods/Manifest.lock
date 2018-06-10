@@ -1,0 +1,16 @@
+PODS:
+  - RKKeyboardManager (0.1.0)
+
+DEPENDENCIES:
+  - RKKeyboardManager (from `../`)
+
+EXTERNAL SOURCES:
+  RKKeyboardManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RKKeyboardManager: 4f313a96d6142e938a77b8ffada1afae7a88f4c9
+
+PODFILE CHECKSUM: 7202d38d1603f9c1ef7e18b23e01339316d3e258
+
+COCOAPODS: 1.5.2
