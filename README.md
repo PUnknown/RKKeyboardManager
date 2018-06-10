@@ -5,9 +5,27 @@
 [![License](https://img.shields.io/cocoapods/l/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
 [![Platform](https://img.shields.io/cocoapods/p/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
 
-## Example
+## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```swift
+let scrollView = UIScrollView()
+
+let keyboardManager = RKKeyboardManager()
+// or let keyboardManager = RKKeyboardManager(scrollView: scrollView)
+
+
+func setupKeyboardManager() {
+    keybordManager.setOnWillChangeFrameBlock { [weak self] keybordFrame, keybordEvent in
+        guard let sself = self else { return }
+        switch keybordEvent {
+        case .willShow, .justChange:
+            // do ...
+        case .willHide:
+            // do ...
+        }
+    }
+}
+```
 
 ## Requirements
 
