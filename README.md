@@ -13,6 +13,8 @@ let scrollView = UIScrollView()
 let keyboardManager = RKKeyboardManager()
 // or let keyboardManager = RKKeyboardManager(scrollView: scrollView)
 
+// keyboardManager.subscribe()
+// keyboardManager.unsubscribe()
 
 func setupKeyboardManager() {
     keybordManager.setOnWillChangeFrameBlock { [weak self] keybordFrame, keybordEvent in
