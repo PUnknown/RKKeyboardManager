@@ -17,9 +17,9 @@ let keyboardManager = RKKeyboardManager()
 // keyboardManager.unsubscribe()
 
 func setupKeyboardManager() {
-    keyboardManager.setOnWillChangeFrameBlock { [weak self] keybordFrame, keybordEvent in
+    keyboardManager.setOnWillChangeFrameBlock { [weak self] keyboardFrame, keyboardEvent in
         guard let sself = self else { return }
-        switch keybordEvent {
+        switch keyboardEvent {
         case .willShow, .justChange:
             // do ...
         case .willHide:
