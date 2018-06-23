@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RKKeyboardManager'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'Simple Keyboard Manager'
 
 # This description is used to generate tags and improve search results.
@@ -20,6 +20,9 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
   Simple Keyboard Manager
   
+  0.1.2
+    fix
+
   0.1.1
     Rename pod
   
@@ -34,7 +37,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/DaskiOFF/RKKeyboardManager.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'RKKeyboardManager/Classes/**/*'
   

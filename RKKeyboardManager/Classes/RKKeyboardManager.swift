@@ -95,7 +95,7 @@ open class RKKeyboardManager: NSObject {
         var event: Event = .justChange
         if beginFrame.origin.y - endFrame.origin.y > 0 && beginFrame.minY >= UIScreen.main.bounds.height {
             event = .willShow
-        } else if beginFrame.origin.y - endFrame.origin.y < 0 && endFrame.minY >= UIScreen.main.bounds.height {
+        } else if beginFrame.origin.y - endFrame.origin.y <= 0 && endFrame.minY >= UIScreen.main.bounds.height {
             event = .willHide
         }
 
