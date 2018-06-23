@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
 [![License](https://img.shields.io/cocoapods/l/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
 [![Platform](https://img.shields.io/cocoapods/p/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
+[![Swift Version](https://img.shields.io/badge/Swift-4.1-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 
 ## Usage
 
@@ -17,9 +18,9 @@ let keyboardManager = RKKeyboardManager()
 // keyboardManager.unsubscribe()
 
 func setupKeyboardManager() {
-    keybordManager.setOnWillChangeFrameBlock { [weak self] keybordFrame, keybordEvent in
+    keyboardManager.setOnWillChangeFrameBlock { [weak self] keyboardFrame, keyboardEvent in
         guard let sself = self else { return }
-        switch keybordEvent {
+        switch keyboardEvent {
         case .willShow, .justChange:
             // do ...
         case .willHide:
