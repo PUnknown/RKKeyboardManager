@@ -2,10 +2,10 @@
 
 [![CI Status](https://img.shields.io/travis/DaskiOFF/RKKeyboardManager.svg?style=flat)](https://travis-ci.org/DaskiOFF/RKKeyboardManager)
 [![Version](https://img.shields.io/cocoapods/v/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
-[![License](https://img.shields.io/cocoapods/l/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
-[![Platform](https://img.shields.io/cocoapods/p/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
-[![Swift Version](https://img.shields.io/badge/Swift-4.1-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
-[![Minimum iOS version](https://img.shields.io/badge/iOS-9%2B-green.svg?style=flat)](https://developer.apple.com/ios)
+[![License MIT](https://img.shields.io/cocoapods/l/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
+[![Platform iOS](https://img.shields.io/cocoapods/p/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
+[![Swift Version 4.1](https://img.shields.io/badge/Swift-4.1-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
+[![Minimum iOS version 9.0](https://img.shields.io/badge/iOS-9%2B-green.svg?style=flat)](https://developer.apple.com/ios)
 
 ## Usage
 
