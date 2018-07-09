@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RKKeyboardManager  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="RKKeyboardManager  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">RKKeyboardManager Docs</a> (66% documented)</p>
+        <p class="header-right"><a href="https://github.com/DaskiOFF/RKKeyboardManager"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">RKKeyboardManager Reference</a>
+        <img id="carat" src="img/carat.png" />
+        RKKeyboardManager  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/RKKeyboardManager.html">RKKeyboardManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RKKeyboardManager/Event.html">– Event</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='rkkeyboardmanager' class='heading'>RKKeyboardManager</h1>
+
+<p><a href="https://travis-ci.org/DaskiOFF/RKKeyboardManager"><img src="https://img.shields.io/travis/DaskiOFF/RKKeyboardManager.svg?style=flat" alt="CI Status"></a>
+<a href="https://cocoapods.org/"><img src="https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat" alt="Cocoapods compatible"></a>
+<a href="https://cocoapods.org/pods/RKKeyboardManager"><img src="https://img.shields.io/cocoapods/v/RKKeyboardManager.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/RKKeyboardManager"><img src="https://img.shields.io/cocoapods/p/RKKeyboardManager.svg?style=flat" alt="Platform iOS"></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift-4.1-brightgreen.svg?style=flat" alt="Swift Version 4.1"></a>
+<a href="https://cocoapods.org/pods/RKKeyboardManager"><img src="https://img.shields.io/cocoapods/l/RKKeyboardManager.svg?style=flat" alt="License MIT"></a></p>
+<h2 id='usage' class='heading'>Usage</h2>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">scrollView</span> <span class="o">=</span> <span class="kt">UIScrollView</span><span class="p">()</span>
+
+<span class="k">let</span> <span class="nv">keyboardManager</span> <span class="o">=</span> <span class="kt">RKKeyboardManager</span><span class="p">()</span>
+<span class="c1">// or let keyboardManager = RKKeyboardManager(scrollView: scrollView)</span>
+
+<span class="c1">// keyboardManager.subscribe()</span>
+<span class="c1">// keyboardManager.unsubscribe()</span>
+
+<span class="kd">func</span> <span class="nf">setupKeyboardManager</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">keyboardManager</span><span class="o">.</span><span class="n">setOnWillChangeFrameBlock</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">keyboardFrame</span><span class="p">,</span> <span class="n">keyboardEvent</span> <span class="k">in</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">sself</span> <span class="o">=</span> <span class="k">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+        <span class="k">switch</span> <span class="n">keyboardEvent</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="o">.</span><span class="n">willShow</span><span class="p">,</span> <span class="o">.</span><span class="nv">justChange</span><span class="p">:</span>
+            <span class="c1">// do ...</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nv">willHide</span><span class="p">:</span>
+            <span class="c1">// do ...</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='requirements' class='heading'>Requirements</h2>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>RKKeyboardManager is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'RKKeyboardManager'</span>
+</code></pre>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>DaskiOFF, <a href="mailto:waydeveloper@gmail.com">waydeveloper@gmail.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>RKKeyboardManager is available under the MIT license. See the LICENSE file for more info.</p>
+<h2 id='a-href-https-ios-factor-com-dependencies-dependencies-a' class='heading'><a href="https://ios-factor.com/dependencies">Dependencies</a></h2>
+
+<p>Последний раз проект собирался с версией <strong>Xcode</strong> указанной в файле <code>.xcode-version</code> (<a href="https://github.com/fastlane/ci/blob/master/docs/xcode-version.md">Подробнее</a>)</p>
+
+<p>Последний раз проект собирался с версией <strong>Swift</strong> указанной в файле <code>.swift-version</code></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2018 <a class="link" href="http://t.me/daskioff" target="_blank" rel="external">DaskiOFF</a> under MIT License</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

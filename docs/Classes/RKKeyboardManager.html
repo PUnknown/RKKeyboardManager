@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RKKeyboardManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/RKKeyboardManager" class="dashAnchor"></a>
+    <a title="RKKeyboardManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RKKeyboardManager Docs</a> (66% documented)</p>
+        <p class="header-right"><a href="https://github.com/DaskiOFF/RKKeyboardManager"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RKKeyboardManager Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RKKeyboardManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/RKKeyboardManager.html">RKKeyboardManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RKKeyboardManager/Event.html">– Event</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RKKeyboardManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">RKKeyboardManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Менеджер работы с клавиатурой</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Types"></a>
+                <a name="//apple_ref/swift/Section/Types" class="dashAnchor"></a>
+                <a href="#/Types">
+                  <h3 class="section-name">Types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RKKeyboardManagerAAC5EventO"></a>
+                    <a name="//apple_ref/swift/Enum/Event" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RKKeyboardManagerAAC5EventO">Event</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Событие открытия клавиатуры</p>
+
+                        <a href="../Classes/RKKeyboardManager/Event.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Event</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RKKeyboardManagerAAC22OnWillChangeFrameBlocka"></a>
+                    <a name="//apple_ref/swift/Alias/OnWillChangeFrameBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RKKeyboardManagerAAC22OnWillChangeFrameBlocka">OnWillChangeFrameBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Тип замыкания вызываемого при изменении клавиатуры</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">OnWillChangeFrameBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">keyboardFrame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/RKKeyboardManager/Event.html">Event</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyboardFrame</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Фрейм клавиатуры</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Событие происходящее с клавиатурой</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RKKeyboardManagerAAC10scrollViewSo08UIScrollD0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scrollView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RKKeyboardManagerAAC10scrollViewSo08UIScrollD0CSgvp">scrollView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">scrollView</span><span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Init"></a>
+                <a name="//apple_ref/swift/Section/Init" class="dashAnchor"></a>
+                <a href="#/Init">
+                  <h3 class="section-name">Init</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@RKKeyboardManager@objc(cs)RKKeyboardManager(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@RKKeyboardManager@objc(cs)RKKeyboardManager(im)init">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RKKeyboardManagerAACABSo12UIScrollViewCSg4with_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RKKeyboardManagerAACABSo12UIScrollViewCSg4with_tcfc">init(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">with</span> <span class="nv">scrollView</span><span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Setters"></a>
+                <a name="//apple_ref/swift/Section/Setters" class="dashAnchor"></a>
+                <a href="#/Setters">
+                  <h3 class="section-name">Setters</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RKKeyboardManagerAAC25setOnWillChangeFrameBlockyySC6CGRectV_AB5EventOtcSgF"></a>
+                    <a name="//apple_ref/swift/Method/setOnWillChangeFrameBlock(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RKKeyboardManagerAAC25setOnWillChangeFrameBlockyySC6CGRectV_AB5EventOtcSgF">setOnWillChangeFrameBlock(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setOnWillChangeFrameBlock</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kt"><a href="../Classes/RKKeyboardManager.html#/s:17RKKeyboardManagerAAC22OnWillChangeFrameBlocka">OnWillChangeFrameBlock</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Subscribe%20/%20Unsubscribe"></a>
+                <a name="//apple_ref/swift/Section/Subscribe / Unsubscribe" class="dashAnchor"></a>
+                <a href="#/Subscribe%20/%20Unsubscribe">
+                  <h3 class="section-name">Subscribe / Unsubscribe</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RKKeyboardManagerAAC9subscribeyyF"></a>
+                    <a name="//apple_ref/swift/Method/subscribe()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RKKeyboardManagerAAC9subscribeyyF">subscribe()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Подписаться на обновления клавиатуры</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RKKeyboardManagerAAC11unsubscribeyyF"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribe()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RKKeyboardManagerAAC11unsubscribeyyF">unsubscribe()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Отписаться от обновлений клавиатуры</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2018 <a class="link" href="http://t.me/daskioff" target="_blank" rel="external">DaskiOFF</a> under MIT License</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -5,7 +5,7 @@
 os: "osx"
 osx_image: "xcode9.3"
 language: swift
-xcode_project: Example/RKKeyboardManager.xcodeproj # path to your xcodeproj folder
+xcode_project: RKKeyboardManager.xcodeproj # path to your xcodeproj folder
 xcode_scheme: RKKeyboardManager
 # cache: cocoapods
 # podfile: Example/Podfile
@@ -13,5 +13,5 @@ xcode_scheme: RKKeyboardManager
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/RKKeyboardManager.xcworkspace -scheme RKKeyboardManager-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.3' | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -project RKKeyboardManager.xcworkspace -scheme RKKeyboardManager-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.3' | xcpretty
 - pod lib lint

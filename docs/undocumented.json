@@ -1,0 +1,33 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKKeyboardManager/Sources/RKKeyboardManager.swift",
+      "line": 48,
+      "symbol": "RKKeyboardManager.scrollView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKKeyboardManager/Sources/RKKeyboardManager.swift",
+      "line": 53,
+      "symbol": "RKKeyboardManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKKeyboardManager/Sources/RKKeyboardManager.swift",
+      "line": 57,
+      "symbol": "RKKeyboardManager.init(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKKeyboardManager/Sources/RKKeyboardManager.swift",
+      "line": 63,
+      "symbol": "RKKeyboardManager.setOnWillChangeFrameBlock(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKKeyboardManager"
+}
