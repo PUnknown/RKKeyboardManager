@@ -38,6 +38,7 @@ Pod::Spec.new do |s|
   s.author           = { 'DaskiOFF' => 'waydeveloper@gmail.com' }
   s.source           = { :git => 'https://github.com/DaskiOFF/RKKeyboardManager.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.documentation_url = 'https://daskioff.github.io/RKKeyboardManager/'
 
   s.ios.deployment_target = '9.0'
 

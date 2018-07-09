@@ -31,6 +31,10 @@ func setupKeyboardManager() {
 }
 ```
 
+## Documentations
+
+https://daskioff.github.io/RKKeyboardManager/
+
 ## Requirements
 
 ## Installation
