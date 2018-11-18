@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RKKeyboardManager'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'Simple Keyboard Manager'
 
 # This description is used to generate tags and improve search results.
@@ -19,6 +19,10 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
   Simple Keyboard Manager
+  0.1.4
+    Update swift 4.2
+    
+
   0.1.3
     update project structure
 
