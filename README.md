@@ -4,7 +4,7 @@
 [![Cocoapods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/)
 [![Version](https://img.shields.io/cocoapods/v/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
 [![Platform iOS](https://img.shields.io/cocoapods/p/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
-[![Swift Version 4.2](https://img.shields.io/badge/Swift-4.1-4.2-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift Version 4.1-4.2](https://img.shields.io/badge/Swift-4.1–4.2-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 [![License MIT](https://img.shields.io/cocoapods/l/RKKeyboardManager.svg?style=flat)](https://cocoapods.org/pods/RKKeyboardManager)
 
 ## Usage
