@@ -69,29 +69,53 @@ open class RKKeyboardManager: NSObject {
     public func subscribe() {
         guard !isSubscribed else { return }
         isSubscribed = true
-        
+
+        #if swift(>=4.2)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillChangeFrame),
-                                               name: .UIKeyboardWillChangeFrame,
+                                               name: UIResponder.keyboardWillChangeFrameNotification,
                                                object: nil)
+        #else
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillChangeFrame),
+            name: .UIKeyboardWillChangeFrame,
+            object: nil)
+        #endif
     }
     
     /// Отписаться от обновлений клавиатуры
     public func unsubscribe() {
         isSubscribed = false
+        #if swift(>=4.2)
+        NotificationCenter.default.removeObserver(
+            self,
+            name: UIResponder.keyboardWillChangeFrameNotification,
+            object: nil)
+        #else
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillChangeFrame, object: nil)
+        #endif
     }
     
     // MARK: - Actions
     @objc
     private func keyboardWillChangeFrame(_ notification: Notification) {
+        #if swift(>=4.2)
+        guard let userInfo = notification.userInfo,
+            let beginFrame = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+            let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            else {
+                return
+        }
+        #else
         guard let userInfo = notification.userInfo,
             let beginFrame = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
             let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
             else {
                 return
-        }
-        
+            }
+        #endif
+
         var event: Event = .justChange
         if beginFrame.origin.y - endFrame.origin.y > 0 && beginFrame.minY >= UIScreen.main.bounds.height {
             event = .willShow
