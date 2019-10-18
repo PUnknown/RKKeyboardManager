@@ -20,7 +20,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-// 
+//
 
 import UIKit
 
@@ -44,10 +44,21 @@ open class RKKeyboardManager: NSObject {
     /// - Parameter event: Событие происходящее с клавиатурой
     public typealias OnWillChangeFrameBlock = (_ keyboardFrame: CGRect, _ event: Event) -> Void
     
+    // MARK: - Variables
+    public var bottomSafeAreaInset: CGFloat {
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        } else {
+            return 0
+        }
+    }
+    
     // MARK: - Properties
     private(set) public var scrollView: UIScrollView? = nil
     private var onWillChangeFrame: OnWillChangeFrameBlock?
     private var isSubscribed: Bool = false
+    private var contentInsetBottom: CGFloat = 0
+    private var scrollIndicatorBottomInset: CGFloat = 0
     
     // MARK: - Init
     public override init() {
@@ -56,6 +67,9 @@ open class RKKeyboardManager: NSObject {
     
     public init(with scrollView: UIScrollView?) {
         self.scrollView = scrollView
+        self.contentInsetBottom = scrollView?.contentInset.bottom ?? 0
+        self.scrollIndicatorBottomInset = scrollView?.scrollIndicatorInsets.bottom ?? 0
+        
         super.init()
     }
     
@@ -117,13 +131,16 @@ open class RKKeyboardManager: NSObject {
         #endif
 
         var event: Event = .justChange
+        var bottomInset: CGFloat = UIScreen.main.bounds.height - endFrame.minY - bottomSafeAreaInset
         if beginFrame.origin.y - endFrame.origin.y > 0 && beginFrame.minY >= UIScreen.main.bounds.height {
             event = .willShow
         } else if beginFrame.origin.y - endFrame.origin.y <= 0 && endFrame.minY >= UIScreen.main.bounds.height {
             event = .willHide
+            bottomInset = 0
         }
 
-        scrollView?.contentInset.bottom = UIScreen.main.bounds.height - endFrame.minY
+        scrollView?.contentInset.bottom = bottomInset + self.contentInsetBottom
+        scrollView?.scrollIndicatorInsets.bottom = bottomInset + self.scrollIndicatorBottomInset
         
         onWillChangeFrame.flatMap({ $0(endFrame, event) })
     }
